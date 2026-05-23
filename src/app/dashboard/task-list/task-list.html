@@ -1,0 +1,21 @@
+<div class="task-list-container">
+  <div class="header-actions">
+    <h2>My Tasks</h2>
+    <button (click)="addNewTask()">+ Add Task</button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Loading tasks...</div>
+
+  <div *ngIf="!loading && tasks.length === 0" class="no-tasks">
+    No tasks found. Click "Add Task" to create one.
+  </div>
+
+  <div class="task-grid">
+    <app-task-card
+      *ngFor="let task of tasks; trackBy: trackByTaskId"
+      [task]="task"
+      (taskUpdated)="onTaskUpdated($event)"
+      (taskDeleted)="onTaskDeleted($event)"
+    ></app-task-card>
+  </div>
+</div>

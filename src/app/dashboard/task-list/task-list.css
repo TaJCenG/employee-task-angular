@@ -1,0 +1,19 @@
+.task-list-container {
+  padding: 1rem;
+}
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.loading, .no-tasks {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+}

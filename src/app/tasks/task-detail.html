@@ -1,0 +1,21 @@
+<div class="detail-container">
+  <div *ngIf="loading">Loading task details...</div>
+  <div *ngIf="error" class="error-message">Task not found or error loading.</div>
+  
+  <div *ngIf="!loading && !error && task" class="task-detail">
+    <h2>{{ task.title }}</h2>
+    <div class="meta">
+      <span class="priority">{{ task.priority | priority }}</span>
+      <span class="status">{{ task.status | status }}</span>
+    </div>
+    <p class="description">{{ task.description }}</p>
+    <div class="info">
+      <div><strong>Due Date:</strong> {{ task.dueDate | date:'fullDate' }}</div>
+      <div><strong>Created:</strong> {{ task.createdAt | date:'mediumDate' }}</div>
+    </div>
+    <div class="actions">
+      <button (click)="editTask()">Edit Task</button>
+      <button (click)="goBack()">Back to List</button>
+    </div>
+  </div>
+</div>

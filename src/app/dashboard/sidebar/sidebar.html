@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <li><a routerLink="tasks" routerLinkActive="active">Tasks</a></li>
+    <li *ngIf="authService.getCurrentUser()?.role === 'admin'">
+      <a routerLink="admin/users" routerLinkActive="active">Users</a>
+    </li>
+  </ul>
+</nav>

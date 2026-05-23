@@ -1,0 +1,20 @@
+nav {
+  width: 200px;
+  background: #ecf0f1;
+  padding: 1rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+a {
+  text-decoration: none;
+  color: #2c3e50;
+}
+a.active {
+  font-weight: bold;
+  color: #e74c3c;
+}

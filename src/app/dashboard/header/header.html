@@ -1,0 +1,7 @@
+<header>
+  <h1>Task Management System</h1>
+  <div class="user-info" *ngIf="authService.getCurrentUser() as user">
+    <span>{{ user.email }}</span>
+    <button (click)="logout()">Logout</button>
+  </div>
+</header>

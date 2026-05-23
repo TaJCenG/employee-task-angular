@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "email": "user@example.com",
+      "password": "password123",
+      "role": "user"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Learn Angular components",
+      "description": "Understand @Input, @Output, and lifecycle hooks",
+      "priority": "high",
+      "status": "",
+      "dueDate": "2026-06-15",
+      "assignedTo": 1,
+      "createdAt": "2026-05-20"
+    },
+    {
+      "id": "2",
+      "title": "Setup json-server",
+      "description": "Create db.json and test endpoints",
+      "priority": "medium",
+      "status": "completed",
+      "dueDate": "2026-05-25",
+      "assignedTo": 2,
+      "createdAt": "2026-05-20"
+    },
+    {
+      "title": "new task",
+      "description": "application test",
+      "priority": "medium",
+      "status": "pending",
+      "dueDate": "2222-02-22",
+      "assignedTo": "1",
+      "createdAt": "2026-05-23",
+      "id": "iNyrs5gqjOU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

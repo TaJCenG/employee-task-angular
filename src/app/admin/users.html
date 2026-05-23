@@ -1,0 +1,21 @@
+<div class="users-container">
+  <h2>User Management (Admin Only)</h2>
+  
+  <div *ngIf="loading">Loading users...</div>
+  <div *ngIf="error" class="error-message">
+    Unable to load users. You may not have admin privileges.
+  </div>
+  
+  <table *ngIf="!loading && !error" class="users-table">
+    <thead>
+      <tr><th>ID</th><th>Email</th><th>Role</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

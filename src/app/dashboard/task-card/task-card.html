@@ -1,0 +1,25 @@
+<div class="task-card" [appOverdueHighlight]="isOverdue" appHoverEffect>
+  <div class="task-header">
+    <h3>{{ task.title }}</h3>
+    <span class="priority-badge">{{ task.priority | priority }}</span>
+  </div>
+  
+  <p class="description">{{ task.description | slice:0:100 }}{{ task.description.length > 100 ? '...' : '' }}</p>
+  
+  <div class="task-meta">
+    <div>Due: {{ task.dueDate | date:'mediumDate' }}</div>
+    <div>Status: {{ task.status | status }}</div>
+  </div>
+  
+  <div class="task-actions">
+    <button 
+      (click)="markCompleted()" 
+      [appDisableButton]="task.status === 'completed'"
+      [disabled]="task.status === 'completed'">
+      ✓ Complete
+    </button>
+    <button (click)="editTask()">✎ Edit</button>
+    <button (click)="deleteTask()" class="delete">🗑 Delete</button>
+    <button (click)="viewDetails()">ℹ Details</button>
+  </div>
+</div>
